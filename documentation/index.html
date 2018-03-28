@@ -103,8 +103,8 @@
 		<p>ICO Crypto is based on Bootstrap 4, So it give you more flexible for customize. All files are clearly organised we believe it will be easy to use and edit them.<br> Design is very clean, elegant and modern. Any one can customize this template as his wishes</p>
 	    <p>&nbsp;</p>
 	    <ul class="marketing-byline">
-	    	<li>Version: 1.1.0</li>
-			<li>Updated: 03/14/2018</li>
+	    	<li>Version: 1.1.2</li>
+			<li>Updated: 03/20/2018</li>
 			<li>Release: 03/02/2018</li>
 			<li>By: Softnio</li>
 		</ul>
@@ -112,8 +112,9 @@
 	</div> <!-- masthead -->
 	
    <div id="intro">
-    <p class="highlight hero-unit">Thank you for purchasing our ICO Crypto Landing HTML Template. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here. Thanks so much!</p>
+    <p class="highlight hero-unit">Thank you for purchasing our ICO Crypto Landing HTML Template. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form. Thanks so much!</p>
    </div> <!-- intro -->
+   <h4>Looking for customize your template to match your brand, please contact us via email <a href="mailto:info@softnio.com">info@softnio.com</a> with requirements.</h4>
    
 	</div>
       
@@ -145,8 +146,22 @@
 	&bull; index-azure-light-pro.html<br>
 	&bull; index-azure-light-pro-animate.html<br>
 	&bull; index-azure-light-pro-particle.html<br>
-	&bull; index-azure-light-pro-particle-animate.html<br>
+	&bull; index-azure-light-pro-particle-animate.html<br><br>
+	<strong>V1.1.1</strong><br>
+	&bull; blog-archive-dark.html<br>
+	&bull; blog-single-dark.html<br>
+	&bull; blog-archive-light.html<br>
+	&bull; blog-single-light.html<br><br>
+	<strong>V1.1.2</strong><br>
+	&bull; blog-archive-azure.html<br>
+	&bull; blog-single-azure.html<br>
+	&bull; blog-archive-azure-light-pro.html<br>
+	&bull; blog-single-azure-light-pro.html<br><br>
+	* Duplicate all the html files for RTL mode <br>
+	<small>(File found in separate folder called "rtl-html")</small>
 </p>
+
+
 
 </section>
 <section id="html_structure">
@@ -225,9 +240,12 @@
 	02. style.css<br>
 	03. theme.css<br>
 	---<br>
+	<strong>Used olny for RTL mode</strong><br>
+	01. rtl.css <small>&nbsp;(v1.1.1)</small><br>
+	---<br>
 </p>
 <p>
-	Also we have also more (5) pre-made color preset. you just need to replace one of those file with our theme file.
+	Also we have also more (6) pre-made color preset. you just need to replace one of those file with our theme file.
 </p>
 <p>
 	<strong>Here is those file list</strong><br>
@@ -292,6 +310,7 @@ body {
 	07. jquery.countdown.min.js<br>
 	08. jquery.waypoints.min.js<br>
 	09. particles.min.js<br>
+	10. select2.min.js <small>(v1.1.1)</small><br>
 	---<br>
 	<strong>Used Files</strong><br>
 	01. jquery.bundle.js<br>
@@ -342,7 +361,7 @@ body {
 
 
 </section>
-<section id="change_log">
+<section>
 <div class="page-header"><h4>How to Set Email Address for Form <small style="color:red">Important</small></h4><hr class="notop"></div>
   <p>First open the php file located into form folder. Files are 'contact.php'. On the file you will saw bellow code. Just update your sitename, your email and name. If you want to add multiple email then just duplicate the line '$emailTO[] = array...' and add another email</p>
   <pre class="php">
@@ -360,6 +379,14 @@ $emailTO[] = array( &#39;email&#39; =&gt; &#39;your mail&#39;, &#39;name&#39; =&
 
 </section>
 
+<section>
+
+<div class="page-header"><h4>How To Use RTL Version <small>v1.1.1</small></h4> <hr class="notop"></div>
+  <p>ICO Crypro now supports RTL mode, You can use this for your RTL mode project. Here is the instruction for uses of RTL mode.</p>
+  <p>For use RTl, You just need to copy HTML files from folder of "rtl-html" and paste into your "main-html" folder. Remember it will ask you to replace existing HTML files, so if you do this you will loose reguler html version, please take a backup before this action</p>
+  <p><strong>Caution : if you try to open HTMl file from "rtl-html" folder, then it will not work, these file only works when it open from "root/main-html" folder.</strong></p>
+</section>
+
 <section id="sources_and_credits">
 	<div class="page-header"><h3>Sources and Credits</h3><hr class="notop"></div>
 	<h4 id="sources_and_credits_javascript_plugins">Javascript plugins:</h4>
@@ -372,6 +399,7 @@ $emailTO[] = array( &#39;email&#39; =&gt; &#39;your mail&#39;, &#39;name&#39; =&
 		Magnific Popup :- <a href="https://github.com/dimsemenov/Magnific-Popup/" target="_blank">https://github.com/dimsemenov/Magnific-Popup/</a><br>
 		WayPoint :- <a href="https://github.com/imakewebthings/waypoints" target="_blank">https://github.com/imakewebthings/waypoints</a><br>
 		CountDown :- <a href="https://github.com/hilios/jQuery.countdown" target="_blank">https://github.com/hilios/jQuery.countdown</a><br>
+		Select2 :- <a href="https://select2.org/" target="_blank">https://select2.org/</a><br>
 	</p>
 	
 	<h4>PHP</h4>
@@ -388,6 +416,33 @@ $emailTO[] = array( &#39;email&#39; =&gt; &#39;your mail&#39;, &#39;name&#39; =&
 	<div class="page-header"><h3>Changes Log</h3><hr class="notop"></div>
 	<p><strong style="color: red">Caution:</strong><br>
 	If you have order version, you can upgrade to newer version. Must aware upgrade process overwrite your custom code if you have already. So must keep backup before any process.</p>
+	
+	<h4 id="changes_logs-version_112">Version 1.1.2 <small>20 March, 2018</small></h4>
+	<p>Blog features added for Azure/Azure Light pro version.</p>
+	<p><strong>New</strong> File Added and Update code: <br>
+	+ blog-archive-azure.html<br>
+	+ blog-single-azure.html<br>
+	+ blog-archive-azure-light-pro.html<br>
+	+ blog-single-azure-light-pro.html<br>
+	! Duplicate all the html files for RTL mode<br>
+	@ stylesheet update regarding new features.
+	</p>
+	<p><em>For updating your template to new version, you need to update stylesheets files (style.css &amp; theme.css).</em></p>
+	<p>&nbsp;</p>
+	
+	<h4 id="changes_logs-version_111">Version 1.1.1 <small>17 March, 2018</small></h4>
+	<p>Template now support complete blog features. Also it supports RTL mode.</p>
+	<p><strong>New</strong> File Added and Update code: <br>
+	+ blog-archive-dark.html<br>
+	+ blog-single-dark.html<br>
+	+ blog-archive-light.html<br>
+	+ blog-single-light.html<br>
+	+ rtl.css<br>
+	! Duplicate all the html files for RTL mode<br>
+	@ javascript and stylesheet update regarding new features.
+	</p>
+	<p><em>For updating your template to new version, you need to update javascript file (jquery.bundle.js &amp; script.js) and stylesheets files (style.css &amp; theme.css).</em></p>
+	<p>&nbsp;</p>
 	
 	<h4 id="changes_logs-version_110">Version 1.1 <small>14 March, 2018</small></h4>
 	<p>+ 2 New Landing Page added.</p>
