@@ -4,11 +4,14 @@ CertifiedTrue public website | Landing page based on template from ICO Crypto
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Currently we are hosting on Firebase a Google service extensive to a realtime webapp both desktop and mobile using service workers. This will save CertifiedTrue from building a mobile app for public web site on Android and iOS.
+Currently we are hosting on Firebase a Google service extensive to a realtime webapp
+both desktop and mobile using service workers. This will save CertifiedTrue from building 
+a mobile app for public web site on Android and iOS.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To deploy. git clone or download the certifedtrue website to your on local computer (use Clone or download in github)
+To deploy. git clone or download the certifedtrue website to your on local computer 
+(use Clone or download in github)
 $ git clone https://github.com/CertifiedTrue/website-main.git
 
 Locally change into website-main
@@ -31,8 +34,8 @@ You're about to initialize a Firebase project in this directory:
 
   /Users/YourLocalComputerName/github/website-main
 
-? Which Firebase CLI features do you want to setup for this folder? Press Space to select features, then Enter to confirm y
-our choices. Hosting: Configure and deploy Firebase Hosting sites
+? Which Firebase CLI features do you want to setup for this folder? Press Space to
+select features, then Enter to confirm your choices. Hosting: Configure and deploy Firebase Hosting sites
 
 === Project Setup
 
