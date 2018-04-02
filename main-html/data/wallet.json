@@ -1,0 +1,70 @@
+[
+  {
+    "date": "2018-3-30",
+    "dateReadable": "March 30",
+    "test": [
+      {
+        "title": "AWS test1"
+      },
+      {
+        "title": "AWS test2"
+      },
+      {
+        "title": "GCP test1"
+      }
+    ],
+    "KYC": [
+      {
+        "startTime": "08:30",
+        "endTime": "09:30",
+        "cert": [
+          [1000]
+        ]
+      },
+      {
+        "startTime": "09:30",
+        "endTime": "10:00",
+        "cert": [
+          [2000]
+        ]
+      },
+      {
+        "startTime": "10:00",
+        "endTime": "10:40",
+        "cert": [
+          [3000]
+        ]
+      },
+      {
+        "startTime": "10:40",
+        "endTime": "11:20",
+        "cert": [
+          [100]
+        ]
+      },
+      {
+        "startTime": "11:30",
+        "endTime": "11:50",
+        "cert": [
+          [5000]
+        ]
+      },
+        {
+        "startTime": "12:00",
+        "endTime": "12:30",
+        "cert": [
+          [-1]
+        ]
+      },
+      {
+        "startTime": "14:30",
+        "endTime": "15:30",
+        "sessions": [
+          [10],
+          [10000],
+          [2000]
+        ]
+      }
+    ]
+  }
+]

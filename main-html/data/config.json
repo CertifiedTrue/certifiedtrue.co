@@ -1,0 +1,23 @@
+{
+    "environment": "test/dev",
+    "mongodbConnectionString": "mongodb://user:password@path_to_database",
+    "sendSMS" : {
+    "twilio": {
+      "dev": {
+        "phoneNumber": "+12345678900",
+        "accountSID": "twilio_account_SID_dev",
+        "authToken": "twilio_auth_token_dev"
+      },
+      "live": {
+        "phoneNumber": "+12345678900",
+        "accountSID": "twilio_account_SID_live",
+        "authToken": "twilio_auth_token_live"
+      }
+    }
+  },
+    "Ethereum": {
+        "live": {
+          "rpc": "http://host:port"
+        }
+    }
+}
