@@ -878,13 +878,13 @@ select:focus { outline: none; border: none; }
   .banner.banner-full { min-height: 100vh; }
   .countdown-box.countdown-header { padding-bottom: 0; } }
 /*! 05.0 - BUTTONS */
-.btn { font-family: "Poppins", sans-serif; font-size: 12px; line-height: 46px; font-weight: 600; padding: 0 34px; text-align: center; text-transform: uppercase; color: #fff; min-width: 160px; max-width: 100%; border: none; box-sizing: border-box; transition: all 0.5s; position: relative; z-index: 2; -ms-border-radius: 23px; border-radius: 23px; background-image: -webkit-linear-gradient(left, #2b56f5 0%, #46bdf4 100%); background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%); }
+.btn { font-family: "Poppins", sans-serif; font-size: 12px; line-height: 46px; font-weight: 600; padding: 0 34px; text-align: center; text-transform: uppercase; color: #fff; min-width: 160px; max-width: 100%; border: none; box-sizing: border-box; transition: all 0.5s; position: relative; z-index: 2; -ms-border-radius: 23px; border-radius: 23px; background: none; background: none; }
 .io-azure .btn { -ms-border-radius: 4px; border-radius: 4px; }
 .io-azure .btn:not(.btn-simple):not(.btn-plane) { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
 .io-azure .btn:after, .io-azure .btn:before { -ms-border-radius: 4px; border-radius: 4px; }
-.btn:before { position: absolute; -ms-border-radius: 23px; border-radius: 23px; left: 0; top: 0; content: ""; width: 100%; height: 100%; z-index: -2; opacity: 0; transition: all .5s ease; background-image: -webkit-linear-gradient(left, #46bdf4 0%, #2b56f5 100%); background-image: linear-gradient(to right, #46bdf4 0%, #2b56f5 100%); }
-.btn.btn-alt { background-image: -webkit-linear-gradient(left, #7a0fff 0%, #46bdf4 100%); background-image: linear-gradient(to right, #7a0fff 0%, #46bdf4 100%); }
-.btn.btn-alt:before { background-image: -webkit-linear-gradient(left, #46bdf4 0%, #7a0fff 100%); background-image: linear-gradient(to right, #46bdf4 0%, #7a0fff 100%); }
+.btn:before { position: absolute; -ms-border-radius: 23px; border-radius: 23px; left: 0; top: 0; content: ""; width: 100%; height: 100%; z-index: -2; opacity: 0; transition: all .5s ease; background: none; background: none; }
+.btn.btn-alt { background: none; background: none; }
+.btn.btn-alt:before { background: none; background: none; }
 .btn:hover:before { opacity: 1; }
 .btn:hover, .btn:focus { color: #fff; outline: none; box-shadow: none; }
 .btn.btn-outline { background: transparent; }
