@@ -14,7 +14,7 @@ To deploy. git clone or download the certifedtrue website to your on local compu
 (use Clone or download in github)
 $ git clone https://github.com/CertifiedTrue/website-main.git
 
-Locally change into website-main
+Locally change into certifiedtrue.co/public
 
 Install Node to automate.
 https://nodejs.org/en/download/
@@ -22,7 +22,7 @@ https://nodejs.org/en/download/
 
 $ npm install -g firebase-tools
 
-Sigin in to Google using certrrue@gmail.com (get password from secrets doc) and open the Firebase console.
+Sigin in to Google using 'my user name'@certifiedtrue.co (get password from admin, see secrets doc) and open the Firebase console.
 
 $ firebase login
 
@@ -32,10 +32,12 @@ $ firebase init
 
 You're about to initialize a Firebase project in this directory:
 
-  /Users/YourLocalComputerName/github/website-main
+  /Users/YourLocalComputerName/github.com/CertifiedTrue/certifiedtrue.co
 
 ? Which Firebase CLI features do you want to setup for this folder? Press Space to
 select features, then Enter to confirm your choices. Hosting: Configure and deploy Firebase Hosting sites
+
+*** Save your changes, commit your changes to github. DO NOT WIPE OUT index.html ***
 
 === Project Setup
 
@@ -43,7 +45,7 @@ First, let's associate this project directory with a Firebase project.
 You can create multiple project aliases by running firebase use --add, 
 but for now we'll just set up a default project.
 
-? Select a default Firebase project for this directory: CertTrueMainWebsite (certtruemainwebsite)
+? Select a default Firebase project for this directory: certifiedtrue.co (main static web site) 
 
 === Hosting Setup
 
