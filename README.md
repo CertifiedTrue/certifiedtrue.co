@@ -1,4 +1,4 @@
-# website
+# CertifiedTrue Website  [![Build Status](https://travis-ci.org/CertifiedTrue/certifiedtrue.co.svg?branch=master)](https://travis-ci.org/CertifiedTrue/certifiedtrue.co)
 CertifiedTrue public website | Landing page based on template from ICO Crypto 
 
 
@@ -80,12 +80,3 @@ $ git push origin master
 Check your commit on github 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
-
-
-
