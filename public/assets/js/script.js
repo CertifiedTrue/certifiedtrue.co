@@ -1,4 +1,4 @@
-/* Template	:	ICO Crypto v1.1.2 */
+/* Template	:	ICO Crypto v1.3.3 */
 (function($){
 	'use strict';
 	var $win = $(window), $body_m = $('body'), $navbar = $('.navbar');
@@ -61,24 +61,24 @@
 	}
 	
 	// Bootstrap Dropdown 
-	var $dropdown_menu = $('.dropdown');	
+	var $dropdown_menu = $('.dropdown-toggle');	
 	if ($dropdown_menu.length > 0 ) {
 		$dropdown_menu.on("mouseover",function(){
 			if ($win.width() > 991) {
 				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().fadeIn("400");
-				$(this).addClass('open'); 
+				$(this).parent().addClass('open'); 
 			}
 		});
 		$dropdown_menu.on("mouseleave",function(){
 			if ($win.width() > 991) {
 				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().fadeOut("400");
-				$(this).removeClass('open'); 
+				$(this).parent().removeClass('open'); 
 			}
 		});
 		$dropdown_menu.on("click",function(){
 			if ($win.width() < 991) {
-				$(this).children('.dropdown-menu').fadeToggle(400);
-				$(this).toggleClass('open'); 
+				$(this).parent().children('.dropdown-menu').fadeToggle(400);
+				$(this).parent().toggleClass('open'); 
 				return false;
 			}
 		});
@@ -86,7 +86,7 @@
 	}
 	$win.on('resize', function() {
 		$('.navbar-collapse').removeClass('in');
-		$dropdown_menu.children('.dropdown-menu').fadeOut("400");
+		$dropdown_menu.parent().children('.dropdown-menu').fadeOut("400");
 	});
 
 	// remove ani
@@ -113,8 +113,14 @@
 		$('.navbar-collapse').collapse('hide');
 		$trannav.removeClass('active');
 	});
+	$(document).on('mouseup', function(e){
+		if (!$trannav.is(e.target) && $trannav.has(e.target).length===0) {
+			$('.navbar-collapse').collapse('hide');
+			$trannav.removeClass('active');
+		}
+	});
 	
-	//Carousel
+	//Carousel Time Line
 	var $timeline_carousel = $('.timeline-carousel');
 	if ($timeline_carousel.length > 0 ) {
 		var c_rtl = ($body_m.hasClass('is-rtl')) ? true : false;
@@ -142,6 +148,94 @@
 					items:6,
 				}
 			}
+		});
+	}
+	
+	//Carousel Roadmap
+	var $roadmap_carousel = $('.roadmap-carousel');
+	if ($roadmap_carousel.length > 0 ) {
+		var c_rtl_r = ($body_m.hasClass('is-rtl')) ? true : false;
+		$roadmap_carousel.addClass('owl-carousel').owlCarousel({
+			items:6,
+			nav:false,
+			dost:true,
+			margin:30,
+			rtl: c_rtl_r,
+			responsive:{
+				0 : {
+					items:1,
+				},
+				400 : {
+					items:2,
+					center:false,
+				},
+				599 : {
+					items:3,
+				},
+				1024 : {
+					items:4,
+				},
+				1170 : {
+					items:5,
+				}
+			}
+		});
+	}	
+	
+	//Carousel Roadmap
+	var $roadmap_carousel_withnav = $('.roadmap-carousel-withnav');
+	if ($roadmap_carousel_withnav.length > 0 ) {
+		var c_rtl_rn = ($body_m.hasClass('is-rtl')) ? true : false;
+		$roadmap_carousel_withnav.addClass('owl-carousel').owlCarousel({
+			navText: ["<i class='ti ti-angle-left'></i>","<i class='ti ti-angle-right'></i>"],
+			items:5,
+			nav:true,
+			dost:false,
+			margin:30,
+			rtl: c_rtl_rn,
+			responsive:{
+				0 : {
+					items:1,
+				},
+				400 : {
+					items:2,
+					center:false,
+				},
+				599 : {
+					items:3,
+				},
+				1024 : {
+					items:4,
+				},
+				1170 : {
+					items:5,
+				}
+			}
+		});
+	}	
+
+	//Carousel
+	var $has_carousel = $('.has-carousel');
+	if ($has_carousel.length > 0 ) {
+		var c_rtl_c = ($body_m.hasClass('is-rtl')) ? true : false;
+		$has_carousel.each(function(){
+			var $self = $(this);
+			var c_item = ($self.data('items')) ? $self.data('items') : 4;
+			var c_item_t = (c_item >= 3) ? 2 : c_item;
+			var c_item_m = (c_item_t >= 2) ? 1 : c_item_t;
+			var c_delay =($self.data('delay')) ? $self.data('delay') : 6000;
+			var c_auto =($self.data('auto')) ? true : false;
+			var c_loop =($self.data('loop')) ? true : false;
+			var c_dots = ($self.data('dots')) ? true : false;
+			var c_navs = ($self.data('navs')) ? true : false;
+			var c_ctr = ($self.data('center')) ? true : false;
+			var c_mgn = ($self.data('margin')) ? $self.data('margin') : 30;
+			$self.addClass('owl-carousel').owlCarousel({
+				navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+				items: c_item, loop: c_loop, nav: c_navs, dots: c_dots, margin: c_mgn, center: c_ctr,
+				autoplay: c_auto, autoplayTimeout: c_delay, autoplaySpeed: 300, rtl: c_rtl_c,
+				responsive:{ 0:{ items:1 }, 480:{ items: c_item_m }, 768:{ items: c_item_t }, 1170:{ items: c_item } }
+			});
 		});
 	}
 	
@@ -318,6 +412,38 @@
 		});
 	}
 	
+	/* @v1.2.0 */
+	//Process Slider
+	var slider_p = '.slider-pane', slider_n = '.slider-nav';
+	if ($(slider_p).length > 0 ) {
+		var c_rtl_s = ($body_m.hasClass('is-rtl')) ? true : false;
+		$(slider_p).addClass('owl-carousel').owlCarousel({
+		 	items:1,
+			nav:false,
+			dotsContainer:slider_n,
+			margin:30,
+			loop:true,
+			autoplayTimeout:3000,
+			rtl: c_rtl_s,
+			autoplay:true,
+			animateOut:'fadeOut',
+			autoplayHoverPause:true
+		});
+	}
+    
+    // accordian
+	var $card = $('.card');
+	if ($card.length > 0) {
+		$card.each(function(){
+			var $cha = $('.card-header a') ;
+			$cha.on('click', function(){
+                var $this = $(this);
+                $this.parent().parent().parent().parent().find($card).removeClass('active');
+				$this.parent().parent().parent().addClass('active');
+			});
+		});
+	}
+    
 	// particlesJS
 	var $particles_js = $('#particles-js');
 	if ($particles_js.length > 0 ) {
@@ -375,7 +501,7 @@
 				"enable": true,
 				"distance": 150,
 				"color": "#2b56f5",
-				"opacity": 0.30,
+				"opacity": 0.50,
 				"width": 1.3
 			},
 			"move": {
@@ -437,5 +563,6 @@
 		// Stop here.
       );
 	}
+	
 	
 })(jQuery);

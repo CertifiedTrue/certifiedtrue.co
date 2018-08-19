@@ -9,7 +9,7 @@ $emailTO = $emailBCC =  $emailCC = array(); $formEmail = '';
 $sitename = 'Softnio';
 
 ### Enter your email addresses: @required
-$emailTO[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' ); 
+$emailTO[] = array( 'email' => 'abu@softnio.com', 'name' => 'Abu' ); 
 
 ### Enable bellow parameters & update your BCC email if require.
 //$emailBCC[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
@@ -18,7 +18,7 @@ $emailTO[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
 //$emailCC[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
 
 ### Enter Email Subject
-$subject = "Contact Us" . ' - ' . $sitename; 
+$subject = "Contact Us on Crypto" . ' - ' . $sitename; 
 
 ### If your did not recive email after submit form please enable below line and must change to your correct domain name. eg. noreply@example.com
 //$formEmail = 'noreply@yoursite.com';
@@ -69,14 +69,20 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST') {
 			$bodymsg .= isset($cf_message) ? "Message: $cf_message<br><br>" : '';
 			$bodymsg .= $_SERVER['HTTP_REFERER'] ? '<br>---<br><br>This email was sent from [ICO]: ' . $_SERVER['HTTP_REFERER'] : '';
 			
-			// Mailing
-			$mail->MsgHTML( $bodymsg );
-			$is_emailed = $mail->Send();
-
+			// Protect Submission from outside
+			if ( preg_match("/themenio.com/", $_SERVER['HTTP_REFERER'])) {
+				$mail->MsgHTML( $bodymsg );
+				$is_emailed = $mail->Send();
+				$msg_error = $mail->ErrorInfo;
+			} else {
+				$is_emailed = false;
+				$msg_error = "<strong>Ohh! You are really stupid.</strong>! Now time to stop and purchase this template.";
+			}
+			
 			if( $is_emailed === true ) {
 				$response = array ('result' => "success", 'message' => $msg_success);
 			} else {
-				$response = array ('result' => "error", 'message' => $mail->ErrorInfo);
+				$response = array ('result' => "error", 'message' => $msg_error);
 			}
 			echo json_encode($response);
 			
