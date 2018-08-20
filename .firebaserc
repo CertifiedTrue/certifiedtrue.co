@@ -1,7 +1,5 @@
 {
   "projects": {
-    "default": "certtruemainwebsite",
-    "prod": "certifiedtrue-co",
-    "test": "certifiedtrue-co"
+    "default": "certifiedtrue-co"
   }
 }

@@ -1,0 +1,90 @@
+[debug] [2018-08-20T08:19:02.632Z] ----------------------------------------------------------------------
+[debug] [2018-08-20T08:19:02.636Z] Command:       /usr/local/Cellar/node/10.9.0/bin/node /usr/local/bin/firebase deploy --debug
+[debug] [2018-08-20T08:19:02.636Z] CLI Version:   4.1.2
+[debug] [2018-08-20T08:19:02.637Z] Platform:      darwin
+[debug] [2018-08-20T08:19:02.637Z] Node Version:  v10.9.0
+[debug] [2018-08-20T08:19:02.638Z] Time:          Mon Aug 20 2018 01:19:02 GMT-0700 (Pacific Daylight Time)
+[debug] [2018-08-20T08:19:02.638Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-20T08:19:02.652Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-20T08:19:02.653Z] > authorizing via signed-in user
+[debug] [2018-08-20T08:19:02.655Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-08-20T08:19:02.656Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-08-20T08:19:02.817Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-20T08:19:02.832Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/certifiedtrue-co  
+ 
+[debug] [2018-08-20T08:19:03.236Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'certifiedtrue-co'...
+[info] 
+[info] i  deploying database, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-08-20T08:19:03.241Z] >>> HTTP REQUEST PUT https://certifiedtrue-co.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+
+[debug] [2018-08-20T08:19:03.570Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database certifiedtrue-co is valid
+[debug] [2018-08-20T08:19:03.571Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/certifiedtrue-co/versions  
+
+[debug] [2018-08-20T08:19:04.440Z] <<< HTTP RESPONSE 200
+[info] i  hosting: found 429 files in public directory
+[debug] [2018-08-20T08:19:04.568Z] [hosting] hash cache [0] not populated
+[debug] [2018-08-20T08:19:05.273Z] [hosting] hash cache [0] stored for 429 files
+[debug] [2018-08-20T08:19:05.274Z] [hosting][hash queue][FINAL]
+[debug] [2018-08-20T08:19:05.274Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/certifiedtrue-co/versions/33a3c3a826b3fe21:populateFiles  
+ <request body omitted>
+[info] i  hosting: adding files to version [0/429] (0%)
+[debug] [2018-08-20T08:19:07.089Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-20T08:19:07.157Z] [hosting][populate queue][FINAL]
+[debug] [2018-08-20T08:19:07.157Z] [hosting] uploads queued: 412
+[info] i  hosting: uploading new files [0/412] (0%)
+[debug] [2018-08-20T08:19:08.852Z] [hosting][upload]
+[info] i  hosting: uploading new files [78/412] (18%)
+[debug] [2018-08-20T08:19:11.121Z] [hosting][upload]
+[info] i  hosting: uploading new files [148/412] (35%)
+[debug] [2018-08-20T08:19:13.873Z] [hosting][upload]
+[info] i  hosting: uploading new files [221/412] (53%)
+[info] i  hosting: uploading new files [283/412] (68%)
+[info] i  hosting: uploading new files [325/412] (78%)
+[info] i  hosting: uploading new files [362/412] (87%)
+[info] i  hosting: uploading new files [392/412] (95%)
+[info] i  hosting: uploading new files [407/412] (98%)
+[info] i  hosting: uploading new files [411/412] (99%)
+[info] i  hosting: uploading new files [411/412] (99%)
+[debug] [2018-08-20T08:19:29.739Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting: file upload complete
+[debug] [2018-08-20T08:19:29.740Z] [hosting] deploy completed after 25299ms
+[info] i  database: releasing rules...
+[debug] [2018-08-20T08:19:29.841Z] >>> HTTP REQUEST PUT https://certifiedtrue-co.firebaseio.com/.settings/rules.json  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+
+[debug] [2018-08-20T08:19:30.246Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules for database certifiedtrue-co released successfully
+[info] i  hosting: finalizing version...
+[debug] [2018-08-20T08:19:30.247Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/certifiedtrue-co/versions/33a3c3a826b3fe21?updateMask=status  
+
+[debug] [2018-08-20T08:19:30.614Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-20T08:19:30.614Z] [hosting] finalized version:
+[info] ✔  hosting: version finalized
+[info] i  hosting: releasing new version...
+[debug] [2018-08-20T08:19:30.615Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/certifiedtrue-co/releases?version_name=sites/certifiedtrue-co/versions/33a3c3a826b3fe21  
+
+[debug] [2018-08-20T08:19:30.995Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-20T08:19:30.996Z] [hosting] release:
+[info] ✔  hosting: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/certifiedtrue-co/overview
+[info] Hosting URL: https://certifiedtrue-co.firebaseapp.com
